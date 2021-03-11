@@ -25,7 +25,6 @@ yarn build
 
 [redux-toolkit](https://redux-toolkit.js.org/) 
 
-
 [axios](https://github.com/axios/axios) 
 
 [apollo/client](https://www.apollographql.com/docs/react/)
