@@ -23,7 +23,7 @@ yarn build
 
 [testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 
-[redux](https://redux.js.org/) 
+[redux-toolkit](https://redux-toolkit.js.org/) 
 
 
 [axios](https://github.com/axios/axios) 
