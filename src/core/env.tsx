@@ -1,4 +1,0 @@
-const { REACT_APP_BASE_URL_GQL, REACT_APP_BASE_URL_REST } = process.env;
-
-export const BASR_URL_GQL = REACT_APP_BASE_URL_GQL;
-export const BASR_URL_REST = REACT_APP_BASE_URL_REST;

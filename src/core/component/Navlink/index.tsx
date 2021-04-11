@@ -70,14 +70,14 @@ const NavLink = () => {
          id="nav-toggle"
       >
          <div className="navbar-brand">
-            <a className="h5 navbar-item" href="https://bulma.io">
+            <span className="h5 navbar-item" >
                <img
                   alt="bulma-logo"
                   src="https://bulma.io/images/bulma-logo.png"
                   width="112"
                   height="28"
                />
-            </a>
+            </span>
 
             <h5
                role="button"
@@ -86,9 +86,9 @@ const NavLink = () => {
                aria-expanded="false"
                onClick={handleNavbarBurgerToggle}
             >
-               <span aria-hidden="true"></span>
-               <span aria-hidden="true"></span>
-               <span aria-hidden="true"></span>
+               <span aria-hidden="true"/>
+               <span aria-hidden="true"/>
+               <span aria-hidden="true"/>
             </h5>
          </div>
 

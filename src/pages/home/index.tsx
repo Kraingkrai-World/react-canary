@@ -1,25 +1,34 @@
-import Counter from "./counter";
+import React, {useEffect} from "react";
+import Counter from "./component/counter";
 
-const Home: React.FC = () => {
+// import {getTodo} from "./services/todo";
+// import {setAuthorization} from "pages/authen/services/auth";
 
-   return (
-      <section className="section">
-         <div className="container">
-            <div className="columns">
-               <div className="column is-three-fifths">
-                  <h1 className="title">สวัสดีชาวโลก</h1>
-                  <p className="subtitle">
-                     My first website with <strong>Bulma</strong>!
-                  </p>
-               </div>
+const Home: React.FunctionComponent = (): React.ReactElement => {
 
-               <div className="column is-one-fifths">
-                  <Counter />
-               </div>
+    useEffect(() => {
+        // setAuthorization();
+        // getTodo({limit: 1});
+    }, []);
+
+    return (
+        <section className="section">
+            <div className="container">
+                <div className="columns">
+                    <div className="column is-three-fifths">
+                        <h1 className="title">สวัสดีชาวโลก</h1>
+                        <p className="subtitle">
+                            My first website with <strong>Bulma</strong>!
+                        </p>
+                    </div>
+
+                    <div className="column is-one-fifths">
+                        <Counter/>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-   );
+        </section>
+    );
 };
 
 export default Home;

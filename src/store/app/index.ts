@@ -37,7 +37,7 @@ const appSlice = createSlice({
       // @ts-expect-error
       [failed_status]: (state) => {
          state.isLoading = false;
-         state.status_request = "faild";
+         state.status_request = "failed";
          state.message_request = "failed_status";
       },
       // @ts-expect-error

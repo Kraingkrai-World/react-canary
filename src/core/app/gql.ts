@@ -1,8 +1,8 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
-import { BASR_URL_GQL } from "core/env";
+import { BASE_URL_GQL } from "core/app/env";
 
 export const client = new ApolloClient({
-   uri: BASR_URL_GQL,
+   uri: BASE_URL_GQL,
    cache: new InMemoryCache(),
 });

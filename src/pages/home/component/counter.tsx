@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { incremented, decremented, RootStoreType } from "../../store/counter/";
+import { incremented, decremented, RootStoreType } from "../../../store/counter";
 
-import { ICounterProps } from "./type";
+import { ICounterProps } from "../model/type";
 
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
