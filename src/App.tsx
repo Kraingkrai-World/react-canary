@@ -2,8 +2,8 @@ import React from "react";
 import {ApolloProvider} from "@apollo/client";
 import {Provider} from "react-redux";
 
-import AppContainer from "./routes";
-import {client} from "./core/app/gql";
+import AppContainer from "./core/app/route";
+import {client} from "./core/utils/gql";
 import store from "./store/";
 
 const App: React.FunctionComponent = (): React.ReactElement => {

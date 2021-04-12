@@ -1,5 +1,6 @@
-import HomePage from './home/'
-import ReadmePage from './readme/'
-import TodoGqlPage from './todogql/'
+import AuthenticatePage from './authen/'
 
-export {HomePage, ReadmePage, TodoGqlPage}
+import HomePage from './home/'
+import TodoPage from './todo/'
+
+export {AuthenticatePage, HomePage, TodoPage}

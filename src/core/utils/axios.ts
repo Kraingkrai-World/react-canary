@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BASE_URL_REST} from "core/app/env";
+import {BASE_URL_REST} from "core/utils/env";
 
 const INIT_OPTION = {
     baseURL: BASE_URL_REST,

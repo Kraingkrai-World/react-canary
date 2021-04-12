@@ -1,4 +1,4 @@
-import {Api, IPropsResp} from "../../../core/app/axios";
+import {Api, IPropsResp} from "../../../core/utils/axios";
 
 const END_POINT = {
     todo: "/todos",

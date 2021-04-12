@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { useDispatch } from "react-redux";
 
-import { GetPosts, PostVar, PostData } from "pages/todogql/services/todo";
+import { GetPosts, PostVar, PostData } from "pages/todo/services/todo";
 import {
    pending_status,
    failed_status,
