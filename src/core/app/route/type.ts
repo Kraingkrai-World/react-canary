@@ -7,9 +7,10 @@ export enum ITypeNavLink {
 }
 
 export interface IPropRoute {
+    label: string
     path: string
-    title: string
     type: ITypeNavLink
+    icon: React.ReactElement
     Component: React.ReactElement
 }
 

@@ -1,6 +1,4 @@
-import "bulma/css/bulma.css";
-import "./assets/theme/own_bulma.css";
-import "./assets/theme/global_styles.css";
+import 'antd/dist/antd.css';
 
 import React from "react";
 import ReactDOM from "react-dom";

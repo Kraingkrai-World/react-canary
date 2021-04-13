@@ -1,13 +1,14 @@
-import "../../../assets/theme/global_styles.css";
-
 import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {useSelector, RootStateOrAny} from "react-redux";
+import {Layout} from 'antd';
 
-import Navbar from "core/app/component/Navlink";
-import {Loading} from "core/app/component/Loading";
+import {Sidebar, Breadcrumb, Footer as MyFooter} from "component/Layout"
+import {Loading} from "component/Loading";
 import {Routes} from "./routes";
 import {IPropRoute, ITypeNavLink} from "./type";
+
+const {Header, Sider, Content, Footer} = Layout;
 
 export const AppRoute = () => {
     let All = [] as IPropRoute[]
@@ -45,11 +46,27 @@ const AppContainer: React.FunctionComponent = (): React.ReactElement => {
     const {isLoading} = useSelector((state: RootStateOrAny) => state.app);
     return (
         <BrowserRouter>
-            <div className={isLoading ? "disable-content" : ""}>
-                <Navbar/>
-                <Switch>{_renderAppRoute()}</Switch>
-                {isLoading && <Loading/>}
-            </div>
+
+            <Layout style={{minHeight: "100vh"}}>
+                <Sider collapsible>
+                    <Sidebar/>
+                </Sider>
+
+                <Layout>
+
+                    <Header style={{padding: 0}}/>
+                    <Breadcrumb/>
+                    <Content style={{margin: '0 16px'}}>
+                        <div style={{padding: 24, minHeight: 360}}>
+                            <Switch>{_renderAppRoute()}</Switch>
+                            {isLoading && <Loading/>}
+                        </div>
+                    </Content>
+
+                    <Footer><MyFooter/></Footer>
+                </Layout>
+
+            </Layout>
         </BrowserRouter>
     );
 };
