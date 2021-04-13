@@ -1,8 +1,8 @@
 import {Api} from "core/utils/axios";
 import {IS_MOCKUP} from "core/utils/env";
 
-import {AuthenticateOutput, AuthenticateInput} from "./model/authen";
-import {AuthenticateOutputMock} from "./mock/authen";
+import {AuthenticateOutput, AuthenticateInput} from "../model/authen";
+import {AuthenticateOutputMock} from "../mock/authen";
 
 const {addHeader, client} = Api
 

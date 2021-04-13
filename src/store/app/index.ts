@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction, createAction} from "@reduxjs/toolkit";
 import {RootState} from "..";
-import {AuthenticateOutput} from "core/app/authen/model/authen";
+import {AuthenticateOutput} from "pages/authen/model/authen";
 
 export const pending_status = createAction("pending");
 export const failed_status = createAction("failed");

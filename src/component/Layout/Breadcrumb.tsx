@@ -1,7 +1,12 @@
 import React from "react";
 import {Row, Col, Breadcrumb} from 'antd';
+import {useSelector} from "react-redux";
+import {RootStoreType} from "../../store/app";
 
 const MyBreadcrumb: React.FunctionComponent = (): React.ReactElement => {
+    const {authenticate} = useSelector(
+        (state: RootStoreType) => state.app
+    );
 
     return (
         <Row>
@@ -9,6 +14,7 @@ const MyBreadcrumb: React.FunctionComponent = (): React.ReactElement => {
                 <Breadcrumb style={{margin: '24px'}}>
                     <Breadcrumb.Item>My</Breadcrumb.Item>
                     <Breadcrumb.Item>Breadcrumb</Breadcrumb.Item>
+                    {authenticate.token && <Breadcrumb.Item>Hi - {authenticate.data.firstName}</Breadcrumb.Item>}
                 </Breadcrumb>
             </Col>
         </Row>
