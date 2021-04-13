@@ -9,6 +9,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@apollo/client": "^3.3.11",
+    "@craco/craco": "^6.1.1",
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -19,6 +20,7 @@
     "@types/react-dom": "^17.0.0",
     "antd": "^4.15.1",
     "axios": "^0.21.1",
+    "craco-less": "^1.17.1",
     "env-cmd": "^10.1.0",
     "graphql": "^15.5.0",
     "react": "^17.0.1",
@@ -32,9 +34,9 @@
   "scripts": {
     "dev": "env-cmd -f .env.development react-scripts start",
     "prod": "env-cmd -f .env.production react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
