@@ -1,28 +1,25 @@
 import React, {useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
-import {Button, Typography, Space , Divider} from 'antd';
+import {Button, Typography, Space, Divider} from 'antd';
 
-import {incremented, decremented, RootStoreType} from "../../../store/counter";
+import {incremented, decremented, RootStoreType} from "store/counter";
 
-import {ICounterProps} from "../model/type";
+import {ICounterType} from "../model/counter";
 
-const INCREMENT = "INCREMENT";
-const DECREMENT = "DECREMENT";
-
-const Counter: React.FC = () => {
+const Counters: React.FunctionComponent = (): React.ReactElement => {
     const dispatch = useDispatch();
     const {value: counterReducer} = useSelector(
         (state: RootStoreType) => state.counter
     );
     const [counter, setCounter] = useState<number>(1);
 
-    const handleCounter = ({type}: ICounterProps) => {
+    const handleCounter = (type: ICounterType) => {
         switch (type) {
-            case INCREMENT:
+            case ICounterType.INCREMENT:
                 dispatch(incremented());
                 setCounter(counter + 1);
                 break;
-            case DECREMENT:
+            case ICounterType.DECREMENT:
                 if (counter === 0) return;
                 dispatch(decremented());
                 setCounter(counter - 1);
@@ -50,7 +47,7 @@ const Counter: React.FC = () => {
                 <Button
                     type="primary"
                     data-testid="btn-counter-increment"
-                    onClick={() => handleCounter({type: INCREMENT})}
+                    onClick={() => handleCounter(ICounterType.INCREMENT)}
                 >
                     <Typography.Text>+</Typography.Text>
                 </Button>
@@ -58,7 +55,7 @@ const Counter: React.FC = () => {
                 <Button
                     type="primary"
                     data-testid="btn-counter-decrement"
-                    onClick={() => handleCounter({type: DECREMENT})}
+                    onClick={() => handleCounter(ICounterType.DECREMENT)}
                     disabled={counter === 0}
                 >
                     <Typography.Text>-</Typography.Text>
@@ -68,4 +65,4 @@ const Counter: React.FC = () => {
     );
 };
 
-export default Counter;
+export default Counters;

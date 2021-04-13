@@ -1,7 +1,7 @@
 import React from "react";
 import {Row, Col, Typography, Divider} from 'antd';
 
-import Counter from "./component/counter";
+import {Counters} from "./component";
 
 const Home: React.FunctionComponent = (): React.ReactElement => {
 
@@ -13,9 +13,10 @@ const Home: React.FunctionComponent = (): React.ReactElement => {
                 </Col>
             </Row>
             <Divider/>
+
             <Row>
                 <Col span={24}>
-                    <Counter/>
+                    <Counters/>
                 </Col>
             </Row>
         </>

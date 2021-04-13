@@ -4,11 +4,11 @@ import {
    fireEvent,
    getAllByRole,
 } from "@testing-library/react";
-import Counter from "./counter";
+import Counters from "./Counters";
 
-describe("<Counter/>", () => {
+describe("<Counters/>", () => {
    const getContainer = () => {
-      const { container } = render(<Counter />);
+      const { container } = render(<Counters />);
       return container;
    };
 

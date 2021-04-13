@@ -6,9 +6,11 @@ import FormLogin from "./component/FormLogin";
 const AuthenticatePages: React.FunctionComponent = (): React.ReactElement => {
     return (
         <>
-            <Row>
-                <Col span={24}>
-                    <FormLogin/>
+            <Row align="middle" justify="center">
+                <Col span={12}>
+                    <div style={{backgroundColor: "#FFFFFF", padding: "32px"}}>
+                        <FormLogin/>
+                    </div>
                 </Col>
             </Row>
         </>

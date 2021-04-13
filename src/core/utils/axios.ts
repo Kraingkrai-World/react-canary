@@ -5,12 +5,6 @@ const INIT_OPTION = {
     baseURL: BASE_URL_REST,
 };
 
-export interface IPropsResp {
-    data: object;
-    statusText: string;
-    status: number;
-}
-
 const Axios = (options: object) => {
     let http = axios.create(options);
 

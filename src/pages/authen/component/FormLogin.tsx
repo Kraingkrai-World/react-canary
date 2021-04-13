@@ -23,6 +23,7 @@ const FormLogin: React.FunctionComponent = (): React.ReactElement => {
             message.success(`Login Success.`)
         } catch (err) {
             console.error('ERR - ', err)
+            message.error(`Login Failed.`)
         }
     };
 
@@ -48,7 +49,7 @@ const FormLogin: React.FunctionComponent = (): React.ReactElement => {
                 <Input.Password/>
             </Form.Item>
 
-            <Form.Item style={{textAlign: "right"}}>
+            <Form.Item style={{textAlign: "center"}}>
                 <Button type="primary" htmlType="submit">
                     Submit
                 </Button>
