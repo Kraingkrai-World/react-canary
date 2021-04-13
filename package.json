@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "@apollo/client": "^3.3.11",
     "@craco/craco": "^6.1.1",
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -32,8 +31,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev": "env-cmd -f .env.development react-scripts start",
-    "prod": "env-cmd -f .env.production react-scripts start",
+    "dev": "env-cmd -f .env.development craco start",
+    "prod": "env-cmd -f .env.production craco start",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
