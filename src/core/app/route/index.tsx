@@ -8,7 +8,7 @@ import {Loading} from "component/Loading";
 import {Routes} from "./routes";
 import {IPropRoute, ITypeNavLink} from "./type";
 
-const {Header, Sider, Content, Footer} = Layout;
+const {Sider, Content, Footer} = Layout;
 
 export const AppRoute = () => {
     let All = [] as IPropRoute[]
@@ -54,7 +54,6 @@ const AppContainer: React.FunctionComponent = (): React.ReactElement => {
 
                 <Layout>
 
-                    <Header style={{padding: 0}}/>
                     <Breadcrumb/>
                     <Content style={{margin: '0 16px'}}>
                         <div style={{padding: 24, minHeight: 360}}>
