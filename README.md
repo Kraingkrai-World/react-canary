@@ -1,9 +1,10 @@
-# React-Canary 
+# React-Canary
 
-React-Canary is a todo practice for beginner.
+React-Canary is my todo.
+
+CRA & Customize Theme antd with craco
 
 ## Available Scripts
-
 
 ```bash
 yarn install
@@ -17,19 +18,17 @@ yarn build
 ```
 
 ## Practice with
+
 [Typescript](https://create-react-app.dev/docs/documentation-intro)
 
-[bulma](https://bulma.io/documentation/overview/start/)
+[Ant Design](https://ant.design/)
 
 [testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 
-[redux-toolkit](https://redux-toolkit.js.org/) 
+[redux-toolkit](https://redux-toolkit.js.org/)
 
-[axios](https://github.com/axios/axios) 
-
-[apollo/client](https://www.apollographql.com/docs/react/)
-
-
+[axios](https://github.com/axios/axios)
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
