@@ -6,15 +6,11 @@ export type RootStoreType = RootState;
 
 export interface IPropsState {
     isLoading?: boolean;
-    status_request?: string;
-    message_request?: string
     authenticate: AuthenticateOutput
 }
 
 const initialState: IPropsState = {
     isLoading: false,
-    status_request: "idle",
-    message_request: "",
     authenticate: {
         token: "",
         data: {

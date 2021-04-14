@@ -4,7 +4,6 @@ import {useSelector, RootStateOrAny} from "react-redux";
 import {Layout} from 'antd';
 
 import {Sidebar, Breadcrumb, Footer as MyFooter} from "component/Layout"
-import {Loading} from "component/Loading";
 import {Routes} from "./routes";
 import {IPropRoute, ITypeNavLink} from "./type";
 
@@ -47,7 +46,11 @@ const AppContainer: React.FunctionComponent = (): React.ReactElement => {
     return (
         <BrowserRouter>
 
-            <Layout style={{minHeight: "100vh"}}>
+            <Layout style={{
+                minHeight: "100vh",
+                cursor: isLoading ? "not-allowed" : "auto",
+                pointerEvents: isLoading ? "none" : "auto"
+            }}>
                 <Sider collapsible>
                     <Sidebar/>
                 </Sider>
@@ -55,10 +58,9 @@ const AppContainer: React.FunctionComponent = (): React.ReactElement => {
                 <Layout>
 
                     <Breadcrumb/>
-                    <Content style={{margin: '0 16px'}}>
-                        <div style={{padding: 24, minHeight: 360}}>
+                    <Content style={{margin: "0 16px"}}>
+                        <div style={{padding: "24px", minHeight: 360}}>
                             <Switch>{_renderAppRoute()}</Switch>
-                            {isLoading && <Loading/>}
                         </div>
                     </Content>
 

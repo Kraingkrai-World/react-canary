@@ -1,10 +1,20 @@
-import { render, screen } from '@testing-library/react';
-
+import {render} from "core/utils/test"
 import HomePage from '.'
 
-test('say hello in home pages', () => {
-    render(<HomePage />);
+describe('Home Page', () => {
+    const {getByText} = render(<HomePage/>);
 
-    const sayHelloText = screen.getByText(/สวัสดีชาวโลก/);
-    expect(sayHelloText).toBeInTheDocument()
+    it("say hello", () => {
+        getByText((content, node) => {
+            const hasText = (node: any) => node.textContent === "สวัสดีชาวโลก";
+            const nodeHasText = hasText(node as any);
+            // @ts-ignore
+            const childrenDontHaveText = Array.from(node.children).every(
+                (child) => !hasText(child)
+            );
+
+            return nodeHasText && childrenDontHaveText;
+        });
+    })
+
 })
