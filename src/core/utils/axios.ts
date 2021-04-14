@@ -11,7 +11,7 @@ const Axios = (options: object) => {
     const handleSuccessResponse = (response: any) => response;
 
     const handleErrorResponse = (errors: any) => {
-        console.log("errors :>> ", errors);
+        console.error("errors :>> ", errors);
         switch (errors.status) {
             case "400":
                 break;
